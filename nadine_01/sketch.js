@@ -2,7 +2,7 @@
 October 2016
 Creation Computation: Multiscreen
 Title: Dictator Bowling
-People: Nadine Lessio & Mudit Gaudy
+People: Nadine & Mudit 
 ************************/
 
 // notes:
