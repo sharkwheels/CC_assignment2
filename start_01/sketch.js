@@ -1,13 +1,15 @@
 /****************
 Creation Computation: Multiscreen
 Use 20 device screens. Meant for usage on phones.
+People: Nadine & Mudit 
 
-Basics:
+Basics / Testing some random draw items:
 	// setup
 	1.a preload a bunch of map pieces (maybe gifs, maybe images, maybe drawings)
 	1.b choose one piece at random.
 	1.c place on screen
 *************/
+
 
 /// Make an array of images ////////
 var imageArray = [];

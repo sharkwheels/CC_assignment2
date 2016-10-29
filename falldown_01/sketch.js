@@ -1,3 +1,13 @@
+/*******************
+October 28 2016
+
+Creation Computation: Multiscreen
+Title: Fascist Falldown v1.0
+People: Nadine & Mudit 
+
+Fascist Falldown is a bowling game where mobile phones act as the pins. 
+
+************************/
 
 var button;
 var imageArray = [];

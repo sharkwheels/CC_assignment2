@@ -1,6 +1,8 @@
 /****************
 Creation Computation: Multiscreen
+People: Nadine & Mudit 
 Use 20 device screens. Meant for usage on phones.
+
 Testing some ACCEL data, the background will change its RGB values based on XYZ values.
 *****************/
 

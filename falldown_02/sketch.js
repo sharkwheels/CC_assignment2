@@ -1,12 +1,15 @@
 /*******************
-October 2016
+October 28 2016
+
 Creation Computation: Multiscreen
-Title: Dictator Bowling
+Title: Fascist Falldown v2.0
 People: Nadine & Mudit 
+
+Fascist Falldown is a bowling game where mobile phones act as the pins. 
+
 ************************/
 
 // notes:
-
 ////https://forum.processing.org/two/discussion/13494/what-s-the-best-way-of-telling-when-a-sound-file-has-finished-playing
 
 var imageArray = [];
@@ -77,10 +80,11 @@ function setup() {
 
 function draw() {
   
-  scale(scaleval,scaleval);
+  
 
   if(gameStart){
     // if the game has started
+    scale(scaleval,scaleval);
     image(randImg,0,0);
     // JS canvas thing that mudit did. 
     if(rotationX < 5){
@@ -88,6 +92,7 @@ function draw() {
       gameEnded = true;
     }
   } else {
+    scale(scaleval,scaleval);
     image(startImage,0,0);
   }
     
@@ -96,18 +101,15 @@ function draw() {
     image(pointsArray[currentdict],0,0);
     // play a sound clip
     soundControl(2);
-    playSounds(crashSound);
-    
-    
+    playSounds(crashSound); 
   }
-  //console.log("gameEnded: ",gameEnded);
-  //console.log("gameStart: ", gameStart);
-  
 }
 
 function mouseReleased(){
 
-  // this isn't quite right. But frankly I'm out of spoons. 
+  // this isn't quite right, but its ok for now. 
+  // Mostly I don't want ppl to be able to re-set on score screen. 
+  // Add in later. Didn't come up in testing. 
 
   if(gameEnded) {
     gameEnded = false;
@@ -125,11 +127,15 @@ function mouseReleased(){
 }
 
 function getDictator(){
-  // it would be good if this didn't load the same random in a row. 
+
+  // Random Functionality to add: 
+  // Don't load the same dictator twice in a row
+  // maybe some kind of shuffle? 
   
     currentdict = Math.floor(Math.random() * imageArray.length);
     randImg = imageArray[currentdict];
-    console.log(randImg);
+    console.log("randImg:",randImg);
+    console.log("currentdict", currentdict);
   
 }
 
@@ -150,7 +156,9 @@ function soundControl(track){
   }
 }
 
-// ok this could be waaaaaay more compact...but hey, spoons. 
+// This could be waaaaaay more compact...but it works for now. 
+// ie: could pass sounds to just a playSound and Stopsound function.
+// tidy up down the road. 
 
 /// Casino Sound ///////////////////////////////////////////////////////////
 
